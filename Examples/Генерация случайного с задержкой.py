@@ -1,0 +1,17 @@
+import time
+import random as rt
+num = rt.randint(1, 100)
+time.sleep(3)
+print(num)
+num = rt.randint(1, 100)
+time.sleep(3)
+print(num)
+num = rt.randint(1, 100)
+time.sleep(3)
+print(num)
+num = rt.randint(1, 100)
+time.sleep(3)
+print(num)
+num = rt.randint(1, 100)
+time.sleep(3)
+print(num)
