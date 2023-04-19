@@ -4,3 +4,14 @@
 # максимумы не должны повторяться
 
 import random
+from heapq import nlargest
+mas = []
+for i in range(30):
+    r = random.randint(10, 50)
+    mas.append(r)
+print(mas)
+mas.sort()
+mas2 = set(mas)
+max_res = nlargest(3, mas2)
+print(max_res)
+
