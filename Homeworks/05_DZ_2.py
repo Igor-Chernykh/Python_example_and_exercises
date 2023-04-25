@@ -17,3 +17,13 @@
 # харизма      3
 # интеллект    2
 # удача        5
+
+Name = [None]
+char_role = ["warrior", "marksman", "mage"]
+character stats
+
+
+
+
+def create_charester():
+    pass
