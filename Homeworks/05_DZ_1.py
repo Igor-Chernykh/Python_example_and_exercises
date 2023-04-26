@@ -45,25 +45,3 @@ def timetable(les_p_day, les):
 
 choise = input("Для каких классов составить расписание?\n 1 - 1-4 класс\n 2 - 5-8 класс\n 3 - 9-11 класс\n")
 user_choise()
-
-# tue_les = timetable(я не знаю что тут писать)
-# print(tue_les)
-# wed_les = timetable(les_p_day, les)
-# print(wed_les)
-# thu_les = timetable(les_p_day, les)
-# print(thu_les)
-# fri_les = timetable(les_p_day, les)
-# print(fri_les)
-
-
-
-
-
-
-# def timetable(les_p_day, les):
-#    def rasp_dnya(les_p_day, les):
-#         day_les = random.sample(les, les_p_day)
-#         print(day_les)
-#         return day_les
-#     mon_les = rasp_dnya()
-#     print(mon_les)
