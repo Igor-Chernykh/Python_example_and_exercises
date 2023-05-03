@@ -9,3 +9,4 @@
 
 players = ["mrWhite", "mrBlack", "mrPink", "meBlue", "mrBrown"]
 scores = [2, 3, 4, 5, 6]
+if dfgthyhtyujyki
