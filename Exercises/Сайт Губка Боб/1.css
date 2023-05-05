@@ -1,0 +1,33 @@
+header{
+    background-color: seagreen;
+        color: white;
+        text-align: center;
+}
+.cont{
+    border: 2px solid black;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+#d1{
+    background-color: coral;
+    color: white;
+}
+#d2{
+    background-color: deepskyblue;
+    color: white;
+}
+#d3{
+    background-color: pink;
+
+}
+    footer{
+    background-color: black;
+    color: white;
+    height: 100px;
+    line-height: 100px;
+}
+a{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+}

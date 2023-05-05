@@ -19,7 +19,7 @@
 # удача        5
 
 def creation_charester():
-    Name = create_name()
+    Name = choise_name()
     Race = choise_race()
     Class = choise_class()
     Stats = None
