@@ -1,0 +1,5 @@
+'День', 1, ['subj3', 'subj4', 'subj1']
+'День', 2, ['subj4', 'subj3', 'subj1']
+'День', 3, ['subj4', 'subj3', 'subj2']
+'День', 4, ['subj2', 'subj4', 'subj3']
+'День', 5, ['subj3', 'subj2', 'subj4']
