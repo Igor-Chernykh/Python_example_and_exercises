@@ -1,5 +1,6 @@
-from selenium import webdriver
+import keyboard
 import time
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 driver = webdriver.Firefox()                # открывается браузер
@@ -12,14 +13,14 @@ for e in e2:                                # получаем адреса вс
     print(e.get_attribute("src"))
 
 find_link = driver.find_element(By.TAG_NAME, "a")
-#find_link.click()                          # кликает на первую ссылку
+# find_link.click()                          # кликает на первую ссылку
 
 find_input = driver.find_element(By.TAG_NAME, "input")
 find_input.send_keys("Привет робот!")       # пишет в инпут
 find_button = driver.find_element(By.TAG_NAME, "button")
 find_button.click()
 
-import keyboard
+
 keyboard.press("Enter")                     # жмет по кнопке Энтер
 
 time.sleep(3)                               # ждет 3 секунды

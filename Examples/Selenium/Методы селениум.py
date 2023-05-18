@@ -10,9 +10,21 @@ user_agents_list = [            # список юзер агентов
 
 # options
 options = webdriver.FirefoxOptions()    # создание объекта опций
-#options.add_argument("user-agent=HelloWorld")  # добавление аргумента
+# options.add_argument("user-agent=HelloWorld")  # добавление аргумента
 options.add_argument(f"user-agent={random.choice(user_agents_list)}")   # рандомный выбор юзер-агента
 driver = webdriver.Firefox(options=options)      # настройки браузера
+
+
+# driver.get("")      # открывается сайт в инете
+# ime.sleep(5)        # задержка времени
+# driver.refresh()    # обновить страницу
+# find_element("")    # найти один элемент
+# find_elements("")   # найти все эл-ты и получить список
+# .click()            # клик по элементу
+# .send_keys()        # написать на сайте если возможно
+# time.sleep()        # задержка по времени
+# .text               # достать текст из элемента
+# .get_attribute()    # достать атрибут элемента
 
 
 try:
