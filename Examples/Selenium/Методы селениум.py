@@ -1,6 +1,9 @@
 import random
 import time
+import keyboard
 from selenium import webdriver      # импортируем веб-драйвер
+from selenium.webdriver.common.by import By
+
 
 user_agents_list = [                # список юзер агентов
     "hello_world",
@@ -26,6 +29,13 @@ driver = webdriver.Firefox(options=options)                             # нас
 # time.sleep()        # задержка по времени
 # .text               # достать текст из элемента
 # .get_attribute()    # достать атрибут элемента
+
+# driver.find_element(By.XPATH, "")
+# driver.find_element(By.ID, "")
+# driver.find_element(By.TAG_NAME, "")
+# driver.find_element(By.NAME, "")
+# driver.find_element(By.CLASS_NAME, "")
+# driver.find_elements(By.CLASS_NAME, "")
 
 
 try:
