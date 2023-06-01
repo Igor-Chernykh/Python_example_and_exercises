@@ -10,12 +10,12 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-options = webdriver.FirefoxOptions()
+options = webdriver.ChromeOptions()
 # options.add_argument("--headless")
-driver = webdriver.Firefox(options=options)
+driver = webdriver.Chrome(options=options)
 driver.implicitly_wait(10)
 
-driver.get("https://www.labirint.ru/")
+
 def start():
     driver.get("https://www.labirint.ru/")
     print("Зашли на сайт")
@@ -36,15 +36,18 @@ def search():
 
 def shop_cart_add():
     print("тестируем добавление в корзину...")
-    book_list = driver.find_elements(By.CLASS_NAME, "rows1")
+    book_list = driver.find_elements(By.CLASS_NAME, "product-padding")
     print("найдено книг:", len(book_list))
-    for elem in book_list:
-        print(elem.text)
-    #     book_add = driver.find_element(By.CLASS_NAME,
-        # book_add = driver.find_element(By.CLASS_NAME, "btn-primary") #btn buy-link btn-primary
-        # time.sleep(1)
-        # book_add.click()
-        # print(elem.text)
+    n = 0
+    while n < 3:
+        for elem in book_list:
+            print(elem)
+            book_add = driver.find_element(By.XPATH, "//a[@class='btn buy-link btn-primary']")
+            time.sleep(1)
+            book_add.click()
+            n = n + 1
+            print("Добавлено", n)
+    
 
     # cards = driver.find_elements(By.CLASS_NAME, "")
     # for i in range(5):
