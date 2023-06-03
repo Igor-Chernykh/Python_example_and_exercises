@@ -48,12 +48,13 @@ def shop_cart_add():
             n = n + 1
             print("Добавлено", n)
     
-
-    # cards = driver.find_elements(By.CLASS_NAME, "")
-    # for i in range(5):
-    #     add = card[i].find_element(By.CLASS_NAME, "")
-    #     add.location_once_scrolled_into_view
-    #     add.click()
+def shop_card_del():
+    cart = driver.find_element(By. , "")
+    cart.click()
+    print("Переход в корзину")
+    button_minus = driver.find_element(By. , "")
+    button_minus.click()
+    print("Убираем товар минусом")
 
 
 
