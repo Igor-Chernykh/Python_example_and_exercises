@@ -15,5 +15,23 @@
 продемонстрировать как методы работают
 """
 
-class Movie:
+class Kino:
+    """Класс для предоставления данных о фильмах"""
+    name = ""
+    director = ""
+    country = ""
+
+    def cinema(self, name):
+        print()
+        pass
+
+    def online(self, name):
+        print()
+        pass
+
+    def translate(self, name):
+        print()
+        pass
+
+
     
