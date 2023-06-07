@@ -15,23 +15,29 @@
 продемонстрировать как методы работают
 """
 
+
 class Kino:
     """Класс для предоставления данных о фильмах"""
-    name = ""
-    director = ""
-    country = ""
 
-    def cinema(self, name):
-        print()
-        pass
+    def __init__(self, name, director, country):
+        self.name = name
+        self.director = director
+        self.country = country
 
-    def online(self, name):
-        print()
-        pass
+    def cinema(self, kinoteatr_name):
+        print(f"Фильм {self.name} показывают в кинотеатре {kinoteatr_name}")
 
-    def translate(self, name):
-        print()
-        pass
+    def online(self, online_kinoteatr_name):
+        print("Фильм", self.name, "показывается в онлайн-кинотеатре", online_kinoteatr_name)
+
+    def translate(self, language):
+        print(f"Фильм {self.name} переводится на {language} язык")
 
 
-    
+film1 = Kino("Переводчик", "Гай Ричи", "Великобритания")
+film2 = Kino("Брат 2", "Алексей Балабанов", "Россия")
+film3 = Kino("Беглец", "Рик Роман Во", "США")
+
+film1.cinema("Формула Кино")
+film2.online("ivi")
+film3.translate("русский")

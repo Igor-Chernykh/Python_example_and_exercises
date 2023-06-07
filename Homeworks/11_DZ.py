@@ -11,7 +11,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 options = webdriver.ChromeOptions()
-# options.add_argument("--headless")
+options.add_argument("--headless")
 driver = webdriver.Chrome(options=options)
 driver.implicitly_wait(10)
 
@@ -36,39 +36,41 @@ def search():
 
 def shop_cart_add():
     print("тестируем добавление в корзину...")
-    book_list = driver.find_elements(By.CLASS_NAME, "product-padding")
+    book_list = driver.find_elements(By.CLASS_NAME, "buy-avaliable")
     print("найдено книг:", len(book_list))
     n = 0
     while n < 3:
         for elem in book_list:
-            print(elem)
             book_add = driver.find_element(By.XPATH, "//a[@class='btn buy-link btn-primary']")
-            time.sleep(1)
-            book_add.click()
-            n = n + 1
-            print("Добавлено", n)
+            if elem.is_displayed():
+                time.sleep(1)
+                book_add.click()
+                n = n + 1
+                print("Добавлено", n)
     
 def shop_card_del():
-    cart = driver.find_element(By. , "")
+    cart = driver.find_element(By.XPATH, "/html/body/div[1]/div[5]/div[3]/div[1]/div[1]/div[2]/div/ul/li[6]/a/span[2]")
     cart.click()
     print("Переход в корзину")
-    button_minus = driver.find_element(By. , "")
-    button_minus.click()
-    print("Убираем товар минусом")
-
+    cart_book_list = driver.find_elements(By.CLASS_NAME, "product-padding-cart")
+    print("книг в корзине:", len(cart_book_list))
+    del_cart = driver.find_element(By.XPATH, "/html/body/div[1]/div[5]/div[2]/div/div/div/div/div/div/div/div[3]/div/div/div/div/div[1]/div/div/a")
+    del_cart.click()
+    print("очищаем корзину")
+    cart_book_list = driver.find_elements(By.CLASS_NAME, "product-padding-cart")
+    print("книг в корзине:", len(cart_book_list))
 
 
 
 try:
     start()
-    # search()
+    search()
     shop_cart_add()
-    pass
+    shop_card_del()
 
 except Exception as ex:
     print(ex)
 
 finally:
-    time.sleep(40)
     driver.close()
     driver.quit()
