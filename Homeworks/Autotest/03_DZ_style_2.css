@@ -1,0 +1,28 @@
+body {
+text-align: center;
+}
+
+h2 {
+color: green
+}
+
+.container {
+text-align: center;
+display: flex;
+flex-wrap: nowrap;
+display: block;
+margin: 0 auto;
+}
+
+.box {
+width: 100%;
+display: block;
+white-space:nowrap;
+}
+
+.block {
+text-align: center;
+width: 80px;
+font-size: 50pt;
+background-color: lightgrey;
+}
